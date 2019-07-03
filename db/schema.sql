@@ -1,8 +1,5 @@
-CREATE DATABASE burgers_db
-,
 
-USE burgers_db
-,
+USE burgers_db;
 
 CREATE TABLE burgers
 (
@@ -15,3 +12,12 @@ CREATE TABLE burgers
     (id)
 );
 
+    insert into burgers
+        (burger_name, devoured)
+    values("Bacon Cheeseburger", false);
+    insert into burgers
+        (burger_name, devoured)
+    values("Turkey Burger", false);
+    insert into burgers
+        (burger_name, devoured)
+    values("Chicken Burger", false)

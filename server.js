@@ -6,11 +6,20 @@ var exphbs = require("express-handlebars")
 var PORT = process.env.PORT || 8000;
 
 var app = express();
-app.engine('handlebars', exphbs({
-    defaultLayout: 'main'
-}))
+// app.engine('handlebars', exphbs({
+//     defaultLayout: 'main'
+// }))
+// app.set('views', __dirname + '/views'); // general config
+// app.set('view engine');
 
-var routes = require('../Eat-Da-Burger/controllers/burger')
+
+
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
+
+var routes = require('./controllers/controllers')
 
 app.use(routes)
 

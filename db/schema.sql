@@ -17,7 +17,7 @@ CREATE TABLE burgers
     values("Bacon Cheeseburger", false);
     insert into burgers
         (burger_name, devoured)
-    values("Turkey Burger", false);
+    values("Turkey Burger", true);
     insert into burgers
         (burger_name, devoured)
     values("Chicken Burger", false)

@@ -16,7 +16,7 @@
 
     <ul class="list-group list-group-flush">
         {{#each burgers}}
-        {{#unless eaten}}
+        {{#unless devoured}}
         {{> burger-block eat=true}}
         {{/unless}}
         {{/each}}
@@ -24,12 +24,12 @@
 </div>
 
 <div class="col-6">
-    <h2>Eaten</h2>
+    <h2>Devoured Burgers</h2>
     <br>
 
     <ul class="list-group list-group-flush">
         {{#each burgers}}
-        {{#if eaten}}
+        {{#if devoured}}
         {{> burger-block eat=false}}
         {{/if}}
         {{/each}}

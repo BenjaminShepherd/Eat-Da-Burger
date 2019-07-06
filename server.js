@@ -11,12 +11,14 @@ var app = express();
 // }))
 // app.set('views', __dirname + '/views'); // general config
 // app.set('view engine');
-
-
+app.use(express.static("public"))
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
 
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+//app.set('views', __dirname + '/views')
 
 
 var routes = require('./controllers/controllers')
